@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(Box2D)
 
+# Hacky fix from https://github.com/google/liquidfun/issues/62
+find_package(Threads)
+
 if(UNIX)
   set(BOX2D_INSTALL_BY_DEFAULT ON)
 else(UNIX)
